@@ -34,9 +34,9 @@
  // Add class 'active' to lists in Navigation Bar
  
  function ActiveNavBar() {
-   var navlists = document.getElementById("navbar__list");
+   const navlists = document.getElementById("navbar__list");
    //  console.log(navlists);
-   var lists = navlists.querySelectorAll("li");
+   const lists = navlists.querySelectorAll("li");
    // console.log(lists);
  
    for (let i = 0; i < lists.length; i++) {
@@ -55,7 +55,7 @@
  
  // Hamburger menu for responsive mode
  function Hamburger() {
-   var x = document.getElementById("navbar__list");
+   const x = document.getElementById("navbar__list");
    console.log(x.className);
   if (x.className === "navbar__menu") {
      x.className += " responsive";
@@ -71,6 +71,7 @@
    // console.log(event);
    const b = document.getElementById("section" + e);
    const pos = b.offsetTop;
+   event.preventDefault();
    //  console.log(pos);
    window.scrollTo({
      left: 0,
@@ -92,19 +93,19 @@
        // console.log(posit);
  
        if (posit <= this.window.innerHeight / 2) {
-         var s = document.getElementsByClassName("your-active-class");
+         const s = document.getElementsByClassName("your-active-class");
          // console.log(s.length);
          s[0].className = s[0].className.replace("your-active-class", "");
  
-         var r = this.document.querySelectorAll("section");
+         const r = this.document.querySelectorAll("section");
          r[i].className = "your-active-class";
  
-         var current = document.getElementsByClassName("active");
+         const current = document.getElementsByClassName("active");
          //  console.log(current);
          if (current.length > 0) {
            current[0].className = current[0].className.replace("active", "");
          }
-         var links = document
+         const links = document
            .getElementById("navbar__list")
            .querySelectorAll("li");
          // console.log(links);

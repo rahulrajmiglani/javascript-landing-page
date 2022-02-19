@@ -98,7 +98,7 @@ section {
 
 
 /* Hamburger Menu */
-.navbar__menu a.hamburger {
+a.hamburger {
     display: none;
 }
 
@@ -107,10 +107,11 @@ section {
         display: none;
     }
     
-    .navbar__menu a.hamburger {
+    a.hamburger {
         float: right;
         display: block;
         font-size: 50px;
+        margin: 10px;
     }
 
     .navbar__menu.responsive li {
@@ -127,6 +128,12 @@ section {
     float: none;
     display: block;
     text-align: left;
+    }
+    .navbar__menu ul {
+        padding-left: 20px;
+        text-align: right;
+        margin: 20px;
+        padding-top: 40px;
     }
 }
 
