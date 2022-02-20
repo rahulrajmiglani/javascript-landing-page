@@ -25,8 +25,9 @@
      li.innerText = sectionName;
  
      document.getElementById("navbar__list").appendChild(li);
-     document.getElementById("linkNumber" + [i + 1]).addEventListener("click", () => {
-         Scrolling(i + 1);
+     document.getElementById("linkNumber" + [i + 1]).addEventListener("click", function(e) {
+      e.preventDefault();   
+      Scrolling(i + 1);
        });
    }
  }
@@ -71,14 +72,13 @@
    // console.log(event);
    const b = document.getElementById("section" + e);
    const pos = b.offsetTop;
-   event.preventDefault();
    //  console.log(pos);
    window.scrollTo({
      left: 0,
      top: pos,
      behavior: "smooth",
    });
- }
+  }
  
  // Set sections as active relative to viewport
  
@@ -162,6 +162,3 @@ const backToTop = function(){
 //      behavior: "smooth",
 //    });
 //  });
- 
- 
- 
