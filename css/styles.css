@@ -66,8 +66,8 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     padding-left: 20px;
-    text-align: right;
     margin: 20px;
+    text-align: right;
 }
 
 .navbar__menu li {
